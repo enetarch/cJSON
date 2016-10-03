@@ -15,6 +15,7 @@
 #include <stdio.h>
 
 #include "cJSON.h"
+#include "functions.h"
 
 
 /*
@@ -22,9 +23,9 @@
  */
 int main(int argc, char** argv) 
 {
-    char * str1 = "hello world";
+    const char * str1 = "hello world";
     printf ("str1 = %s\r\n" , str1);
-    char * str2 = strDupe (str1);
+    const char * str2 = strDupe (str1);
     printf ("str2 = %s\r\n" , str2);
 
     cJSON * json = JSON(null);

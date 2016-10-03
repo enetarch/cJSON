@@ -60,7 +60,7 @@ struct cJSON
     cJSON * (* addNumbers) (cJSON * this, int count, double *numbers);
     cJSON * (* addStrings) (cJSON * this, int count, const char **strings);
     cJSON * (* addArray) (cJSON * this, const char *name);
-    cJSON * (* addObject) (cJSON * this, const char *name);
+    cJSON * (* addObject) (cJSON * this, const const char *name);
 
     /* Delete a cJSON entity and all children. */
     bool  (* destruct) (cJSON * this);
@@ -91,10 +91,10 @@ struct cJSON
     cJSON * (* duplicate) (cJSON *this, int recurse);
     
     /* Render a cJSON entity to text for transfer/storage. Free the char* when finished. */
-    char * (* print) (cJSON * this);
+    const char * (* print) (cJSON * this);
 
     /* Render a cJSON entity to text for transfer/storage without any formatting. Free the char* when finished. */
-    char  * (* printUnformatted) (cJSON * this);
+    const char * (* printUnformatted) (cJSON * this);
 
     /* For analysing failed parses. This returns a pointer to the parse error. 
      * You'll probably need to look a few chars back to make sense of it. Defined 

@@ -33,6 +33,8 @@
 #include <ctype.h>
 
 #include "cJSON.h"
+#include "functions.h"
+#include "stubs.h"
 
 #define true 1
 #define false 0
@@ -48,7 +50,7 @@ struct Private
         
 	int type;		/* The type of the item == [ TRUE, FALSE, NULL, NUMBER, STRING, ARRAY, OBJECT ] */
 
-	char *name;		/* The item's name string, if Parent's type OR this type == cJSON_Object */
+	const char *name;	/* The item's name string, if Parent's type OR this type == cJSON_Object */
 
 	const char *valuestring;	/* The item's string, if type == String */
 	int valueint;		/* The item's number, if type == Number */
@@ -119,7 +121,7 @@ cJSON * JSON (const char *szJSON)
         if (getType (this) == cJSON_Object)
         {
             if (private->name) 
-                free (private->name);
+                free ((void *)private->name);
 
             private->name = strDupe (name);
         }
@@ -161,12 +163,12 @@ cJSON * JSON (const char *szJSON)
                 destruct (private->child);
             
             if (!(private->type) && private->valuestring) 
-                free (private->valuestring);
+                free ((void *)private->valuestring);
             
             if (private->name) 
-                free (private->name);
+                free ((void *)private->name);
             
-            free (private);
+            free ((void *)private);
             private = next;
         }
         
@@ -174,13 +176,6 @@ cJSON * JSON (const char *szJSON)
         
         return (true);
     }
-
-    /* Render a private item/entity/structure to text. */
-    char *print (cJSON *this) ;
-//    { return print_value (item, 0, 1); }
-
-    char *printUnformatted (cJSON *this) ;
-//    { return print_value (item, 0, 0); }
 
     // =========================================================================
 
@@ -341,7 +336,7 @@ cJSON * JSON (const char *szJSON)
         Private * private = this->private;
         
         if (private->name) 
-            free (private->name);
+            free ((void *)private->name);
 
         private->name = strDupe (name);
 

@@ -10,5 +10,5 @@
 
 
 extern cJSON * parse (const char * buffer) {} 
-extern void printUnformatted (cJSON * this) {}
-extern void print (cJSON * this) {}
+extern const char * printUnformatted (cJSON * this) {}
+extern const char * print (cJSON * this) {}

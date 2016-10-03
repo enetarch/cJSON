@@ -22,8 +22,10 @@ extern "C" {
 #include "cJSON.h"
 
 extern cJSON * parse (const char * buffer);
-extern void printUnformatted (cJSON * this);
-extern void print (cJSON * this);
+
+/* Render a private item/entity/structure to text. */
+extern const char * printUnformatted (cJSON * this);
+extern const char * print (cJSON * this);
 
 
 

@@ -4,35 +4,38 @@
 #include <string.h>
 // #include <uuid/uuid.h>
 
-const char* strDupe (const char* str)
-{
-      int len;
-      char* copy;
+#define bool int
 
-      len = strlen (str) + 1;
-      copy = (char*) malloc (len);
-      
-      if (!copy) 
-      {
-          printf ("error allocating space for duplicate string\r\n");
-          return 0;
-      }
-      
-      memset (copy, 0, len);
-      memcpy (copy, str, len);
-      
-      return (copy);
+const char * strDupe (const char * str)
+{
+    int len;
+    char * copy;
+
+    len = strlen (str) + 1;
+    copy = (char*) malloc (len);
+
+    if (!copy) 
+    {
+        printf ("error allocating space for duplicate string\r\n");
+        return 0;
+    }
+
+    memset (copy, 0, len);
+    memcpy (copy, str, len);
+
+    return (copy);
 }
 
 
-char * strLeft (char *szStr, int nLen)
+const char * strLeft (const char *szStr, int nLen)
 {  
     char *rtn = malloc (nLen+1);
     strncpy (rtn, szStr, nLen);
     return (rtn); 
 }
 
-char * strTrim (char *szStr)
+/*
+const char * strTrim (const char *szStr)
 {  
     int i;
     int begin = 0;
@@ -52,9 +55,10 @@ char * strTrim (char *szStr)
     
     return (szStr);
 }
+*/
 
 /*
-char * date_now ()
+const char * date_now ()
 {
     time_t curtime = time (NULL);
 
@@ -80,7 +84,7 @@ char * date_now ()
 */
 /*
 
-char * getGUID ()
+const char * getGUID ()
 {
     uuid_t out;
     char *guid = malloc (40);
