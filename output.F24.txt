@@ -1,0 +1,34 @@
+str1 = hello world
+str2 = hello world
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+ json = 61f0b0
+json2 = 61f220
+ json->addNumber = ffffe320
+json2->addNumber = ffffe320
+enetering ... json->getSize (json)
+get size 
+json->getSize (json) = 0
+enetering ... json->getName (json)
+get name 
+json->getName (json) = (null)
+enetering ... json->getName (json, [Root])
+set name = [ Root ] 
+get type
+json->getName (json, [Root]) = Root
+enetering ... json->getName (json)
+get name 
+json->getName (json) = Root
+enetering ... json->getType (json)
+get type
+json->getType (json) = 6
+ json->addNumber = ffffe320
+compare .. json->addNumber == json2->addNumber = t
+enetering ... json->addNumber (json, [number], 123)
+
+
+

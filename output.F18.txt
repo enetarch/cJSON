@@ -1,0 +1,140 @@
+str1 = hello world
+str2 = hello world
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+ json = 84f090
+json2 = 84f200
+ json->addNumber = 40151b
+json2->addNumber = 40151b
+enetering ... json->getSize (json)
+get size 
+json->getSize (json) = 0
+enetering ... json->getName (json)
+get name 
+json->getName (json) = (null)
+enetering ... json->getName (json, [Root])
+set name = [ Root ] 
+get type
+json->getName (json, [Root]) = Root
+enetering ... json->getName (json)
+get name 
+json->getName (json) = Root
+enetering ... json->getType (json)
+get type
+json->getType (json) = 6
+ json->addNumber = 40151b
+compare .. json->addNumber == json2->addNumber = t
+enetering ... json->addNumber (json, [number], 123)
+add number [ number ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ number ]
+get type
+add Item To Array
+enetering ... json->getSize (json)
+get size 
+json->getSize (json) = 1
+enetering ... json->addString (json, [string], [abc123])
+add string [ string ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ string ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->addObject (json, [object])
+json2->addNumber = 40151b
+add object [ object ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ object ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->getType (json)
+get type
+json->getType (json) = 6
+enetering ... json->addArray (json, [array])
+add array [ array ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ array ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->getType (json) = get type
+json->getType (json) = 5
+enetering ... json->addNull (json, [null])
+add null [ null ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ null ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->addTrue (json, [true])
+add true [ true ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ true ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->addFalse (json, [false])
+add false [ false ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ false ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->addBool (json, [booltrue])
+add bool [ booltrue ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ booltrue ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->addBool (json, [boolfalse])
+add bool [ boolfalse ] 
+get type
+construct object
+sizeof (Private) = 80 
+sizeof (cJSON) = 256 
+add Item To Object [ boolfalse ]
+get type
+add Item To Array
+insert object into list
+enetering ... json->getType (json)
+get size 
+json->getType (json) = 6
+enetering ... json->getByPos (json)
+get by pos = [ 2 ] 
+json->getByPos (json) = 0enetering ... json->getByName (json)
+get by name = [ object ] 
+get type
+json->getByName (json) = 0enetering ... json->getChild (json)
+get children 
+get type
+json->getChild (obj3) = 1
